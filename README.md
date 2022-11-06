@@ -93,6 +93,18 @@ Is a Maven app.
 <br>Requires Java 17
 App runs listening at localhost:8080
 
+##### Run as docker
+
+(Tested with docker engine version 20.10.20)
+At root folder, build the docker image:
+`docker build --tag=test-java-app:latest .`
+Run as docker container:
+`docker run -p8888:8080 test-java-app:latest`
+will run the app and mapping container port 8080 to host port 8888,
+so app will be listening at localhost:8888.
+
+Base image 
+
 #### Design decisions made
 
 ###### Java version
@@ -129,7 +141,6 @@ Names also tend to be _use intention-revealing_ and pronounceable.
 
 #### Pending
 
-* Containerize app (docker)
 * Logging
 * API First: OpenAPI definition (swagger file)
 * Hexagonal architecture (loosely coupled)
