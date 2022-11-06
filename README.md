@@ -103,7 +103,7 @@ Run as docker container:
 will run the app and mapping container port 8080 to host port 8888,
 so app will be listening at localhost:8888.
 
-Base image 
+Base image is `eclipse-temurin` based on alpine linux because eclipse-temurin is commonly used and alpine linux is lightweight.
 
 #### Design decisions made
 
