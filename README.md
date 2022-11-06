@@ -84,11 +84,22 @@ Response JSON Example:
 * SpringData with JPA
 * h2 database 2.1
 
+#### Compile
+Is a Maven app.
+`mvn clean package` will generate a .jar at /application/target folder
+
+#### Run
+`java -jar application-0.0.1-SNAPSHOT.jar`
+<br>Requires Java 17
+App runs listening at localhost:8080
 
 #### Design decisions made
 
 ###### Java version
 Used Java 17, mainly because is LTS. 
+
+###### Multi-module
+Persistence layer is on a separate module, just in case app grows and need reusing.  
 
 ###### Criteria Query
 For the implementation of the relatively complex query to get the rate that applied conditioned to range date and priority ordering, Criteria Query has been chosen over other alternatives like JPQL(@Query,@NamedQuery annotation), HQL or native query.
@@ -125,3 +136,4 @@ Names also tend to be _use intention-revealing_ and pronounceable.
 * Testing Pyramid, missing Unit Testing and End2End Testing
 * SonarQube integration with centralized rules (in case of multi projects/multi teams environment). Currently SonarLint running on IDE.
 * Migrate DTO using to Record and MapStruct
+* Implement CQRS Pattern 
