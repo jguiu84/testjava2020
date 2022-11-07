@@ -132,6 +132,9 @@ Error (exception) messages are centralized with com.example.application.exceptio
 ###### Dates
 Dates in API REST are always in date time iso format: 2020-06-14T16:00:00
 
+###### Logging
+Logging applied using Lombok's @Slf4j annotation. Implemented at TarifaController.
+
 #### Patterns applied
 
 ###### Repository Pattern
@@ -149,7 +152,6 @@ Names also tend to be _use intention-revealing_ and pronounceable.
 
 #### Pending
 
-* Logging
 * API First: OpenAPI definition (swagger file)
 * Hexagonal architecture (loosely coupled)
 * Testing Pyramid, missing Unit Testing and End2End Testing
