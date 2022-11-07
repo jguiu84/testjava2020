@@ -45,7 +45,7 @@ And returns as data output:
 
 Is mandatory to use an in memory DB (like h2) and initialize with the example data (columns names can be changed and new columns can be added, choose the column type according data).
 
-Develop tests tot the REST endpoint that validate next queries to the service with example data:
+Develop tests to the REST endpoint that validate next queries to the service with example data:
 * Test 1: query for day 14 at 10:00 for the product 35455 for brand 1 (ZARA)
 * Test 2: query for day 14 at 16:00 for the product 35455 for brand 1 (ZARA)
 * Test 3: query for day 14 at 21:00 for the product 35455 for brand 1 (ZARA)
@@ -83,6 +83,14 @@ Response JSON Example:
 * SpringBoot 2.7.5 
 * SpringData with JPA
 * h2 database 2.1
+
+#### Tests
+Requested Tests are implemented as Integration Tests at test class<br>
+/application/src/test/java/com/example/application/controller/TarifaControllerIT
+integration test are covering REST controller, service and persistence.
+
+Tests run with:<br>
+`mvn verify -Pfailsafe`
 
 #### Compile
 Is a Maven app.
