@@ -155,4 +155,5 @@ Names also tend to be _use intention-revealing_ and pronounceable.
 * Testing Pyramid, missing Unit Testing and End2End Testing
 * SonarQube integration with centralized rules (in case of multi projects/multi teams environment). Currently SonarLint running on IDE.
 * Migrate DTO using to Record and MapStruct
-* Implement CQRS Pattern 
+* Implement CQRS Pattern
+* Implement Reactive Programming using Spring WebFlux (and R2DBC)
