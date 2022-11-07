@@ -23,19 +23,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 @SpringBootTest(classes = Application.class)
-public class TarifaControllerIT {
+class TarifaControllerIT {
 
-    String date1 = LocalDateTime.of(2020, 6, 14, 10, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
-    String date2 = LocalDateTime.of(2020, 6, 14, 16, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
-    String date3 = LocalDateTime.of(2020, 6, 14, 21, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
-    String date4 = LocalDateTime.of(2020, 6, 15, 10, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
-    String date5 = LocalDateTime.of(2020, 6, 16, 21, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
+    private String date1 = LocalDateTime.of(2020, 6, 14, 10, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
+    private String date2 = LocalDateTime.of(2020, 6, 14, 16, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
+    private String date3 = LocalDateTime.of(2020, 6, 14, 21, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
+    private String date4 = LocalDateTime.of(2020, 6, 15, 10, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
+    private String date5 = LocalDateTime.of(2020, 6, 16, 21, 0, 0 ).format(DateTimeFormatter.ISO_DATE_TIME);
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void testPrices() throws Exception {
+    void testPrices() throws Exception {
         testPriceList(date1, 1);
         testPriceList(date2, 2);
         testPriceList(date3, 1);
